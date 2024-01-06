@@ -20,7 +20,6 @@ jobs:
 
           mv config build/overrides
           mv kubejs build/overrides
-          mv scripts build/overrides
           mv manifest.json build
           mv modlist.html build
 
