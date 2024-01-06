@@ -17,9 +17,17 @@ jobs:
         run: |
           cd ./
           mkdir build
-          mv modpack/.minecraft build/overrides
-          mv modpack/manifest.json build
-          mv modpack/modlist.html build
+
+          mv ${GITHUB_WORKSPACE} build/overrides
+          mv manifest.json build
+          mv modlist.html build
+
+          rm -r build/overrides/.github
+          rm build/overrides/.gitignore
+          rm build/overrides/LICENSE
+          rm build/overrides/manifest.json
+          rm build/overrides/modlist.html
+          rm build/overrides/README.md
 
       - name: Upload modpack to Actions
         uses: actions/upload-artifact@v3
