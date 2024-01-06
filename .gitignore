@@ -1,0 +1,20 @@
+#basic files list
+/*
+!.github/
+!.gitignore
+!LICENSE
+!manifest.json
+!modlist.html
+!README.md
+
+#main files list
+!mods/
+mods/*
+!config/
+!kubejs/
+!scripts/
+
+#blacklist
+config/openloader/.cache
+
+#whitelist

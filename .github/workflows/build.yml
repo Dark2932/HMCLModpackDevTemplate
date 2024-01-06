@@ -1,0 +1,28 @@
+name: Builder
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Pack modpack
+        run: |
+          cd ./
+          mkdir build
+          mv modpack/.minecraft build/overrides
+          mv modpack/manifest.json build
+          mv modpack/modlist.html build
+
+      - name: Upload modpack to Actions
+        uses: actions/upload-artifact@v3
+        with:
+          name: YourModpackName
+          path: build
