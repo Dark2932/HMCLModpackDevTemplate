@@ -11,19 +11,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    
       - uses: actions/checkout@v3
-
-      - name: Pack modpack
-        run: |
-          cd ./
-          mkdir build
-          mv manifest.json build
-          mv modlist.html build
-          mv config build/overrides
-          mv kubejs build/overrides
 
       - name: Upload modpack to Actions
         uses: actions/upload-artifact@v3
         with:
           name: YourModpackName
-          path: build
+          path: modpack

@@ -1,18 +1,20 @@
 #basic files list
 /*
+!modpack/
+modpack/*
+!modpack/overrides/
+modpack/overrides/*
+!modpack/manifest.json
+!modpack/modlist.html
+!README.md
 !.github/
 !.gitignore
 !LICENSE
-!manifest.json
-!modlist.html
-!README.md
 
 #main files list
-!mods/
-mods/*
-!config/
-!kubejs/
-!scripts/
+!modpack/overrides/config/
+!modpack/overrides/kubejs/
+!modpack/overrides/scripts/
 
 #blacklist
 config/openloader/.cache
